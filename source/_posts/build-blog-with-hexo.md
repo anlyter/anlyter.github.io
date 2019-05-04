@@ -30,11 +30,12 @@ tags: [hexo]
 > <img src="../archives/images/hexo-init.png" />
 > 7. 怎么样？是不是很简陋？别着急，还没完，这只是走完了万里长征的第一步！
 
-## 网站基本设置
+## 网站设置
+### 基本信息
 常规设置比如网站标题、网站作者、网站使用语言，编辑myblog/_config.yml等。更多配置说明见\[官网配置说明(https://hexo.io/zh-cn/docs/configuration)\]，配置示例：
 ```yaml
 title: 你的博客名称 ## 网站标题
-subtitle:
+subtitle: 子标题 ## 网站子标题(一般是座右铭)
 description:
 keywords:
 author: 作者名称 ## 网站作者
@@ -49,7 +50,108 @@ permalink: :year:month:day.html/ ## 永久链接
 permalink_defaults:
 ```
 
-## 网站部署设置
+### 菜单
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+menu:
+  home: / || home ## 首页
+  archives: /archives/ || archive ## 归档
+  tags: /tags/ || tags ## 标签
+  about: /about/ || user ## 关于
+  #categories: /categories/ || th
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
+```
+
+### 社交链接
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+# Social Links
+# Usage: `Key: permalink || icon`
+# Key is the link label showing to end users.
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+social:
+  GitHub: https://github.com/yourname || github ## 代码托管仓库地址
+  E-Mail: mailto:yourname@gmail.com || envelope ## 联系邮箱地址
+  #Weibo: https://weibo.com/yourname || weibo
+  #Google: https://plus.google.com/yourname || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #VK Group: https://vk.com/yourname || vk
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  #YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
+```
+
+### 友情链接
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+# Blog rolls
+links_icon: link
+links_title: 友情链接 ## 友情链接名称
+links_layout: block
+#links_layout: inline
+links:
+  #Title: http://example.com
+  CSDN: https://www.csdn.net ## CSDN链接地址
+  博客园: https://www.csblogs.com ## 博客园链接地址
+  InfoQ: http://www.infoq.com/cn/ ## InfoQ链接地址
+  开源中国: https://www.oschina.net/ ## 开源中国链接地址
+```
+
+### 头像（未生效）
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+# Sidebar Avatar
+avatar:
+  # In theme directory (source/images): /images/avatar.gif
+  # In site directory (source/uploads): /uploads/avatar.gif
+  # You can also use other linking images.
+  url: /images/avatar.jpg ## 头像地址
+  # If true, the avatar would be dispalyed in circle.
+  rounded: false
+  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+  opacity: 1
+  # If true, the avatar would be rotated with the cursor.
+  rotated: false
+```
+
+### 文章元数据显示
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true ## 是否显示发表时间
+  updated_at:
+    enable: false // 是否显示更新时间
+    another_day: true
+  categories: false // 是否显示分类
+```
+
+### 打赏（未生效）
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+reward:
+  reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！ ## 打赏说明
+  wechatpay: /images/wechatpay.jpg ## 微信二维码
+  alipay: /images/alipay.jpg ## 支付宝二维码
+  #bitcoin: /images/bitcoin.png
+```
+
+### 代码高亮自定义（尚未完工）
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+# Code Highlight theme
+# Available values: normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normalcustom light
+```
+
+### 部署
 编辑myblog/_config.yml，配置示例：
 ```yaml
 # Deployment
