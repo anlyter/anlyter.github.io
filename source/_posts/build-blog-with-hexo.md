@@ -32,7 +32,7 @@ tags: [hexo]
 
 ## 网站设置
 ### 基本信息
-常规设置比如网站标题、网站作者、网站使用语言，编辑myblog/_config.yml等。更多配置说明见\[官网配置说明(https://hexo.io/zh-cn/docs/configuration)\]，配置示例：
+常规设置比如网站标题、网站作者、网站使用语言，编辑myblog/_config.yml等。更多配置说明见\[[官网配置说明](https://hexo.io/zh-cn/docs/configuration)\]，配置示例：
 ```yaml
 title: 你的博客名称 ## 网站标题
 subtitle: 子标题 ## 网站子标题(一般是座右铭)
@@ -50,7 +50,7 @@ permalink: :year:month:day.html/ ## 永久链接
 permalink_defaults:
 ```
 
-### 菜单
+### 菜单配置
 编辑myblog/themes/next/_config.yml，配置示例：
 ```yaml
 menu:
@@ -102,7 +102,7 @@ links:
   开源中国: https://www.oschina.net/ ## 开源中国链接地址
 ```
 
-### 头像（未生效）
+### 头像设置
 编辑myblog/themes/next/_config.yml，配置示例：
 ```yaml
 # Sidebar Avatar
@@ -132,14 +132,21 @@ post_meta:
   categories: false // 是否显示分类
 ```
 
-### 打赏（未生效）
+### 打赏设置
 编辑myblog/themes/next/_config.yml，配置示例：
 ```yaml
+# Reward (Donate)
+reward_settings:
+  # If true, reward would be displayed in every article by default.
+  # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
+  enable: true ## 启用打赏功能
+  animation: true ## 启用鼠标悬浮二维码时字体旋转效果
+  comment: 打赏说明 ## 打赏说明
+
 reward:
-  reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！ ## 打赏说明
   wechatpay: /images/wechatpay.jpg ## 微信二维码
   alipay: /images/alipay.jpg ## 支付宝二维码
-  #bitcoin: /images/bitcoin.png
+  #bitcoin: /images/bitcoin.png 
 ```
 
 ### 代码高亮自定义（尚未完工）
