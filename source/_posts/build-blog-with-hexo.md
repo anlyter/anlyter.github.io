@@ -11,10 +11,10 @@ tags: [hexo]
 ## 安装基本工具
 > 1. Git Bash\[[下载地址](https://gitforwindows.org/)\]
   <!-- ![](../archives/images/git-bash.PNG) -->
-> <img src="../archives/images/git-bash.png" />
+> <img src="../archives/images/git-bash.png" width="100%" />
 > 2. NodeJS\[[下载地址](https://nodejs.org/en/)\]，安装注意点：请在Custom Setup步骤勾选``Add to PATH``
   <!-- ![](../archives/images/nodejs.PNG) -->
-> <img src="../archives/images/nodejs.png" />
+> <img src="../archives/images/nodejs.png" width="100%" />
 
 ## 初步搭建博客
 <!-- <video id="video" width="900" controls="controls" preload="none" poster="../archives/poster.jpg">
@@ -27,10 +27,10 @@ tags: [hexo]
 > 4. 初始化由Hexo驱动的博客，执行``hexo init``，至此一个原生的由Hexo驱动的博客就搭建好了
 > 5. 下面就一睹它的芳容吧！执行``hexo server``，启动博客
 > 6. 接着访问http://localhost:4000 ，效果如下：
-> <img src="../archives/images/hexo-init.png" />
+> <img src="../archives/images/hexo-init.png" width="100%" />
 > 7. 怎么样？是不是很简陋？别着急，还没完，这只是走完了万里长征的第一步！
 
-## 网站设置
+## 网站相关配置
 ### 基本信息
 常规设置比如网站标题、网站作者、网站使用语言，编辑myblog/_config.yml等。更多配置说明见\[[官网配置说明](https://hexo.io/zh-cn/docs/configuration)\]，配置示例：
 ```yaml
@@ -119,7 +119,7 @@ avatar:
   rotated: false
 ```
 
-### 文章元数据显示
+### 文章信息
 编辑myblog/themes/next/_config.yml，配置示例：
 ```yaml
 # Post meta display settings
@@ -127,9 +127,9 @@ post_meta:
   item_text: true
   created_at: true ## 是否显示发表时间
   updated_at:
-    enable: false // 是否显示更新时间
+    enable: false ## 是否显示更新时间
     another_day: true
-  categories: false // 是否显示分类
+  categories: false ## 是否显示分类
 ```
 
 ### 打赏设置
@@ -147,6 +147,53 @@ reward:
   wechatpay: /images/wechatpay.jpg ## 微信二维码
   alipay: /images/alipay.jpg ## 支付宝二维码
   #bitcoin: /images/bitcoin.png 
+```
+
+### 版权声明
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+footer:
+  # Specify the date when the site was setup. If not defined, current year will be used.
+  #since: 2015
+
+  # Icon between year and copyright info.
+  icon:
+    # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons/
+    # `heart` is recommended with animation in red (#ff0000).
+    #name: user ## 禁止显示用户图标
+    # If you want to animate the icon, set it to true.
+    animated: false
+    # Change the color of icon, using Hex Code.
+    color: "#808080"
+
+  # If not defined, `author` from Hexo main config will be used.
+  copyright: 版权声明 ## 版权说明
+
+  powered:
+    # Hexo link (Powered by Hexo).
+    enable: false ## 禁止显示“由Hexo强力驱动”
+    # Version info of Hexo after Hexo link (vX.X.X).
+    version: false ## 禁止显示Hexo版本号
+
+  theme:
+    # Theme & scheme info link (Theme - NexT.scheme).
+    enable: false ## 禁止显示使用的主题
+    # Version info of NexT after scheme info (vX.X.X).
+    version: false ## 禁止显示使用主题的版本
+
+  # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
+  # http://www.beian.miit.gov.cn
+  beian:
+    enable: false
+    icp:
+```
+
+### 站点统计
+编辑myblog/themes/next/_config.yml，配置示例：
+```yaml
+  # Any custom text can be defined here.
+  custom_text: <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>本站访问量 <span id="busuanzi_value_site_pv"></span> 次，访客数 <span id="busuanzi_value_site_uv"></span> 人次。 
+  ## 引用“不蒜子”脚本进行站点统计
 ```
 
 ### 代码高亮自定义（尚未完工）
