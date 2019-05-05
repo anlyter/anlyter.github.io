@@ -6,14 +6,14 @@
 title: 王文彬的博客
 subtitle: 前进前进向前进
 description: 
-keywords:
+keywords: 王文彬的博客
 author: 王文彬
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://anlyter.github.io
 root: /
 permalink: :year:month:day.html/
 permalink_defaults:
