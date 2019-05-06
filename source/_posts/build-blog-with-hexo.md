@@ -191,12 +191,33 @@ footer:
 ### 站点统计
 编辑myblog/themes/next/_config.yml，配置示例：
 ```yaml
-  # Any custom text can be defined here.
-  custom_text: <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>本站访问量 <span id="busuanzi_value_site_pv"></span> 次，访客数 <span id="busuanzi_value_site_uv"></span> 人次。 
-  ## 引用“不蒜子”脚本进行站点统计
+# Any custom text can be defined here.
+custom_text: <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>本站访问量 <span id="busuanzi_value_site_pv"></span> 次，访客数 <span id="busuanzi_value_site_uv"></span> 人次。 
+## 引用“不蒜子”脚本进行站点统计
 ```
 
-### 代码高亮自定义（尚未完工）
+## 安装相关插件
+### 搜索插件
+> 1. 安装``hexo-generator-searchdb``，执行``npm install hexo-generator-searchdb --save``
+> 2. 编辑myblog/themes/next/_config.yml，开启本地搜索：
+```yaml
+# Local search
+# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
+local_search:
+  enable: true ## 启用本地搜索
+  # If auto, trigger search by changing input.
+  # If manual, trigger search by pressing enter key or search button.
+  trigger: auto
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+
+# Swiftype Search API Key
+#swiftype_key:
+```
+
+### 代码高亮（尚未完工）
 编辑myblog/themes/next/_config.yml，配置示例：
 ```yaml
 # Code Highlight theme
@@ -205,17 +226,7 @@ footer:
 highlight_theme: normalcustom light
 ```
 
-### 部署
-编辑myblog/_config.yml，配置示例：
-```yaml
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: https://github.com/anlyter/anlyter.github.io
-```
-
-## 搜索引擎优化（待续）
+## 搜索引擎优化
 编辑myblog/themes/next/_config.yml，配置示例：
 ```yaml
 # ---------------------------------------------------------------
@@ -258,4 +269,14 @@ exturl: false
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
 baidu_push: false
+```
+
+## 网站部署配置
+编辑myblog/_config.yml，配置示例：
+```yaml
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/anlyter/anlyter.github.io
 ```
