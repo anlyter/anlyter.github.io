@@ -217,6 +217,20 @@ local_search:
 #swiftype_key:
 ```
 
+### 弹出框插件
+> 1. 执行``cd themes/next``
+> 2. 执行``git clone https://github.com/theme-next/theme-next-fancybox3 source/lib/fancybox``
+> 3. 编辑myblog/themes/next/_config.yml，启用弹出框功能：
+```yaml
+# Fancybox. There is support for old version 2 and new version 3.
+# Choose only one variant, do not need to install both.
+# To install 2.x: https://github.com/theme-next/theme-next-fancybox
+# To install 3.x: https://github.com/theme-next/theme-next-fancybox3
+fancybox: true ## 启用弹出框功能
+```
+> 4. 效果如下图：
+> <img src="../archives/images/fancybox-effects.png" width="100%" />
+
 ### 代码高亮（尚未完工）
 编辑myblog/themes/next/_config.yml，配置示例：
 ```yaml
