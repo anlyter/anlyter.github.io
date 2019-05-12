@@ -1,5 +1,5 @@
 ---
-title: 用Hexo搭建自己的博客
+title: 搭建自己的博客
 date: 2018-06-02 14:18:21
 categories: Hexo
 tags: [hexo]
@@ -217,7 +217,7 @@ local_search:
 #swiftype_key:
 ```
 
-### 弹出框插件
+### 图片插件
 > 1. 执行``cd themes/next``
 > 2. 执行``git clone https://github.com/theme-next/theme-next-fancybox3 source/lib/fancybox``
 > 3. 编辑myblog/themes/next/_config.yml，启用弹出框功能：
@@ -230,15 +230,6 @@ fancybox: true ## 启用弹出框功能
 ```
 > 4. 效果如下图：
 > <img src="../archives/images/fancybox-effects.png" width="100%" />
-
-### 代码高亮（尚未完工）
-编辑myblog/themes/next/_config.yml，配置示例：
-```yaml
-# Code Highlight theme
-# Available values: normal | night | night eighties | night blue | night bright
-# https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normalcustom light
-```
 
 ## 搜索引擎优化
 编辑myblog/themes/next/_config.yml，配置示例：
