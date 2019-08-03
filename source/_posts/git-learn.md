@@ -376,11 +376,11 @@ Git is free software.
 ```
 $ git status
 On branch master
-Changes not staged for commit: ## 暂存区中有变更的文件列表
+Changes not staged for commit: ## 工作区中有变更的文件列表
   (use "git add <file>..." to update what will be committed) ## 使用git add readme.txt将文件添加至暂存区
   (use "git checkout -- <file>..." to discard changes in working directory) ## 使用git checkout -- readme.txt撤销工作区中的修改。注意会丢失修改内容，请慎重，除非确定要这样做。
 
-        modified:   readme.txt ## 暂存区中已修改的文件
+        modified:   readme.txt ## 工作区中已修改的文件
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -628,6 +628,11 @@ anlyter (2):
       add distributed
       wrote a readme file
 ```
+
+##### 
+> 实际开发中，有时会遇到强制删除了一个分支而后又想重新使用这个分支，或者hard-reset了一个分支从而丢弃了分支的部分commit。有什么办法把丢失的commit找回呢？
+
+对于这种情况，git已为我们提供了``git reflog``工具。
 
 #### 远程协作
 #### 分支管理
